@@ -1,0 +1,94 @@
+# LambDynamicLights configuration.
+# The dynamic lights mode
+mode = "fancy"
+
+# Light sources settings.
+[light_sources]
+	# Enables water-sensitive light sources check. This means that water-sensitive items will not light up when submerged in water.
+	water_sensitive_check = true
+	# Enable block entities light source.
+	block_entities = true
+	# Enable entities light source.
+	entities = true
+	# TNT lighting mode. May be off, simple or fancy.
+	tnt = "off"
+	# Creeper lighting mode. May be off, simple or fancy.
+	creeper = "simple"
+
+	[light_sources.settings]
+
+		[light_sources.settings.entities]
+
+			[light_sources.settings.entities.minecraft]
+				chicken = true
+				axolotl = true
+				bee = true
+				arrow = true
+				trader_llama = true
+				donkey = true
+				cow = true
+				chest_minecart = true
+				tropical_fish = true
+				slime = true
+				pig = true
+				pillager = true
+				skeleton = true
+				iron_golem = true
+				bat = true
+				husk = true
+				rabbit = true
+				cat = true
+				zombie = true
+				armor_stand = true
+				drowned = true
+				sheep = true
+				experience_orb = true
+				player = true
+				item = true
+				villager = true
+				skeleton_horse = true
+				salmon = true
+				wandering_trader = true
+				zombie_villager = true
+				ocelot = true
+				horse = true
+				vindicator = true
+				phantom = true
+				cave_spider = true
+				glow_squid = true
+				witch = true
+				cod = true
+				glow_item_frame = false
+				spider = true
+				parrot = true
+				creeper = true
+				lightning_bolt = true
+				enderman = true
+
+			[light_sources.settings.entities.naturalist]
+				rattlesnake = true
+				deer = true
+				zebra = true
+				snail = true
+				firefly = true
+				rhino = true
+				hippo = true
+				bluejay = true
+				coral_snake = true
+				snake = true
+				lion = true
+				vulture = true
+				robin = true
+				butterfly = true
+				bear = true
+				elephant = true
+
+			[light_sources.settings.entities.guardvillagers]
+				guard = true
+
+			[light_sources.settings.entities.ecologics]
+				coconut_crab = true
+
+			[light_sources.settings.entities.duckling]
+				duck = true
+
