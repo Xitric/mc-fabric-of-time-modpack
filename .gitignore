@@ -1,0 +1,20 @@
+# Game related files, not relevant for the mod pack
+.fabric
+crash-reports
+downloads
+journeymap
+logs
+mods
+resourcepacks
+saves
+shaderpacks
+.curseclient
+irisUpdateInfo.json
+minecraftInstance.json
+options.txt
+patchouli_data.json
+rhino.local.properties
+usercache.json
+
+# Generated files from KubeJS
+kubejs/exported
