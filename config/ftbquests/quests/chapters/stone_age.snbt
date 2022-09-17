@@ -209,10 +209,10 @@
 			rewards: [{
 				id: "10C4578EB067CA5F"
 				type: "gamestage"
-				title: "Unlock: Iron Age"
-				icon: "minecraft:iron_ingot"
+				title: "Unlock: Bronze Age"
+				icon: "alloygery:bronze_ingot"
 				auto: "invisible"
-				stage: "Iron Age"
+				stage: "Bronze Age"
 			}]
 		}
 		{

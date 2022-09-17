@@ -2,9 +2,9 @@
 	id: "08B704CD2721EAE1"
 	group: "1914D11D09907FDA"
 	order_index: 1
-	filename: "iron_age"
-	title: "Iron Age"
-	icon: "minecraft:iron_ingot"
+	filename: "bronze_age"
+	title: "Bronze Age"
+	icon: "alloygery:bronze_ingot"
 	subtitle: ["Advancements of Mankind"]
 	default_quest_shape: ""
 	default_hide_dependency_lines: false
