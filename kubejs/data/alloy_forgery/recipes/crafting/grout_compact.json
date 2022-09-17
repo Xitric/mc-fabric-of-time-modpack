@@ -1,0 +1,36 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "c:gravel"
+    },
+    {
+      "tag": "c:gravel"
+    },
+    {
+      "tag": "c:gravel"
+    },
+    {
+      "tag": "c:gravel"
+    },
+    {
+      "tag": "c:sand"
+    },
+    {
+      "tag": "c:sand"
+    },
+    {
+      "tag": "c:sand"
+    },
+    {
+      "tag": "c:sand"
+    },
+    {
+      "item": "minecraft:clay"
+    }
+  ],
+  "result": {
+    "item": "kubejs:grout",
+    "count": 8
+  }
+}

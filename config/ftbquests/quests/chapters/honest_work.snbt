@@ -125,7 +125,7 @@
 			description: ["Your famland requires nearby water to stay hydrated. This puts you at the mercy of nature when scouting for potential farming locations. By using a bucket, you can move water wherever you wish."]
 			dependencies: [
 				"3619094037883726"
-				"1CB464293D90E1E0"
+				"3036FA9F73661C28"
 			]
 			id: "6B4688801F6C7CFF"
 			tasks: [{

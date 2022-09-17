@@ -1,0 +1,12 @@
+{
+  "type": "alloygery:alloying",
+  "inputs": [
+    {
+      "item": "notreepunching:clay_brick"
+    }
+  ],
+  "output":{
+    "id": "minecraft:brick"
+  },
+  "smelting_time": 200
+}

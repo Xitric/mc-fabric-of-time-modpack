@@ -1,0 +1,23 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "c:gravel"
+    },
+    {
+      "tag": "c:sand"
+    },
+    [
+      {
+        "item": "minecraft:clay_ball"
+      },
+      {
+        "item": "notreepunching:clay_brick"
+      }
+    ]
+  ],
+  "result": {
+    "item": "kubejs:grout",
+    "count": 2
+  }
+}

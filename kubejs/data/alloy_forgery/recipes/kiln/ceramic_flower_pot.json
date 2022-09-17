@@ -1,0 +1,12 @@
+{
+  "type": "alloygery:alloying",
+  "inputs": [
+    {
+      "item": "notreepunching:clay_flower_pot"
+    }
+  ],
+  "output":{
+    "id": "minecraft:flower_pot"
+  },
+  "smelting_time": 800
+}

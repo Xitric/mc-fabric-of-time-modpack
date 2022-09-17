@@ -1,0 +1,12 @@
+{
+  "type": "alloygery:alloying",
+  "inputs": [
+    {
+      "item": "notreepunching:clay_bucket"
+    }
+  ],
+  "output":{
+    "id": "notreepunching:ceramic_bucket"
+  },
+  "smelting_time": 1600
+}

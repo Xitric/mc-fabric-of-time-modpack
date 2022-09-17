@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "SKS",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "kubejs:seared_bricks"
+    },
+    "K": {
+      "item": "alloygery:alloy_kiln"
+    }
+  },
+  "result": {
+    "item": "alloy_forgery:seared_bricks_forge_controller"
+  }
+}

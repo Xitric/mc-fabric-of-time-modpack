@@ -10,11 +10,15 @@
 	default_hide_dependency_lines: false
 	quests: [
 		{
-			title: "Acquiring Better Materials"
-			x: -5.0d
+			title: "We Need to Go Higher"
+			x: -3.5d
 			y: 0.0d
-			description: ["Your flint tools won't do you any good in the long term. It is time to invest into the creation of better materials. This journey starts with mixing together the elements used to make heat-resistant bricks."]
-			dependencies: ["2724B9C2547186AA"]
+			description: [
+				"Okay, hear me out - I think I know a solution."
+				"Those tough clumps you found ungerground, I tried to put them in our kiln to see if it would do any good. I noticed they got a bit more malleable, but not nearly enough to shape them into tools."
+				"We need to find a way to reach much higher temperatures than our primitive kiln is capable of maintaining."
+			]
+			dependencies: ["23638B6750DA92C8"]
 			id: "7034D7A14E27BC0D"
 			tasks: [{
 				id: "0912E492D206127B"
@@ -25,12 +29,12 @@
 			}]
 		}
 		{
-			title: "Brick Maker"
-			x: -3.5d
+			title: "A True Mason"
+			x: -2.0d
 			y: 0.0d
 			description: [
-				"Use your grout on a campfire or in a furnace to fire a heap of seared bricks. This special type of brick is central in the creation of forges, which can be used to smelt together metals."
-				"Different tiers of metals require special tiers of forges, so don't expect much for now."
+				"I think you are on to something there! This new mixture of clay, gravel, and sand seems to exhibit many of the same characteristics as basic clay, except it is more dense."
+				"The campfire is not hot enough to fire it, but I bet if we leave it in the kiln for a good while, it should solidify into proper bricks."
 			]
 			dependencies: ["7034D7A14E27BC0D"]
 			id: "7E995B73FF7578E9"
@@ -43,12 +47,12 @@
 			}]
 		}
 		{
-			title: "Forge Ablaze!"
-			x: -2.0d
+			title: "Reinforced Kiln"
+			x: -0.5d
 			y: 0.0d
 			description: [
-				"The forge controller is the centerpiece of any forge. You interact with the controller to add fuel and raw materials for processing, as well as for retrieving the outcome."
-				"Craft a forge controller with your seared brick. You may ponder on the controller to learn how to construct your first forge."
+				"Success! These seared bricks are truly the next step on our journey to shaping metals."
+				"I bet we could reinforce a kiln with these bricks to make it withstand higher temperatures. Just don't expect to fire your regular clayware in this reinforced kiln - I fear it would burn up!"
 			]
 			dependencies: ["7E995B73FF7578E9"]
 			id: "0F762CC593DA809C"
@@ -60,16 +64,24 @@
 			}]
 		}
 		{
-			x: -0.5d
+			title: "Tougher Than Stone"
+			x: -5.0d
 			y: 0.0d
-			id: "50EABC016C00B432"
-			tasks: [{
-				id: "42298008803A6F3F"
-				type: "observation"
-				timer: 0L
-				observe_type: 0
-				to_observe: "minecraft:dirt"
-			}]
+			description: ["What is that you found there? I hope your flint pickaxe did not break on you. That stuff is tough - I wonder if we could somehow harness its strength and acquire better tools for ourselves?"]
+			min_required_tasks: 1
+			id: "23638B6750DA92C8"
+			tasks: [
+				{
+					id: "4DC4FE43CE304C4B"
+					type: "item"
+					item: "minecraft:raw_copper"
+				}
+				{
+					id: "24DF87C400A40CBB"
+					type: "item"
+					item: "alloygery:raw_tin"
+				}
+			]
 		}
 	]
 }

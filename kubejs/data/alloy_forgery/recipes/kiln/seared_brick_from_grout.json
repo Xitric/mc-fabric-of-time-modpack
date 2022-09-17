@@ -1,0 +1,12 @@
+{
+  "type": "alloygery:alloying",
+  "inputs": [
+    {
+      "item": "kubejs:grout"
+    }
+  ],
+  "output":{
+    "id": "kubejs:seared_brick"
+  },
+  "smelting_time": 400
+}

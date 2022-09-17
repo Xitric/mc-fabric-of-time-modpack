@@ -191,7 +191,7 @@
 			title: "Master of Stone"
 			x: 1.0d
 			y: 1.5d
-			description: ["Stone is a great building material, but you will need a sturdy tool to break it apart. Use your plant fiber to make a primitive pickaxe."]
+			description: ["Stone is a great building material, but you will need a sturdy tool to break it apart. Use your plant fiber to bind a primitive pickaxe."]
 			dependencies: ["015EDFB2920F5419"]
 			id: "2724B9C2547186AA"
 			tasks: [{
@@ -295,9 +295,12 @@
 		}
 		{
 			title: "You're a Potter, Harry"
-			x: -3.5d
-			y: 3.0d
-			description: ["By using your clay tool on a block of clay, you can shape it into magnificent works of art - or simply some pots, if you will."]
+			x: -2.0d
+			y: 1.5d
+			description: [
+				"By using your clay tool on a block of clay, you can shape it into magnificent works of art - or simply some pots, if you will."
+				"The clayware is still fragile at this point, so you will need a kiln to fire it."
+			]
 			dependencies: ["30410FDEB3520AEF"]
 			id: "3619094037883726"
 			tasks: [{
@@ -348,6 +351,36 @@
 					}
 				}
 			}]
+		}
+		{
+			title: "Early Masonry"
+			icon: "alloygery:alloy_kiln"
+			x: -3.5d
+			y: 3.0d
+			description: [
+				"Most ceramic utilities crafted from clay are quite fragile until properly fired. Consequently, we won't be making works of art on that campfire."
+				"So let us start simple instead. Why don't you fire some clay bricks on the campfire? They will come in handy when crafting a more protective kiln for our clayware."
+			]
+			dependencies: [
+				"30410FDEB3520AEF"
+				"1CB464293D90E1E0"
+			]
+			id: "3036FA9F73661C28"
+			tasks: [
+				{
+					id: "3852A77E33F36B3C"
+					type: "item"
+					title: "Fire Bricks"
+					item: "minecraft:brick"
+					count: 8L
+				}
+				{
+					id: "4F1EFA7052D769A6"
+					type: "item"
+					title: "Craft a Kiln"
+					item: "alloygery:alloy_kiln"
+				}
+			]
 		}
 	]
 }
