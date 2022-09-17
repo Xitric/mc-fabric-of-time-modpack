@@ -2,8 +2,7 @@
 	"credit": "Made with Blockbench, by Brotazoa",
 	"parent": "minecraft:block/block",
 	"textures": {
-		"0": "twigs:block/copper_pillar",
-		"1": "alloygery:block/bronze_block",
+		"0": "alloygery:block/bronze_block",
 		"particle": "alloygery:block/bronze_block"
 	},
 	"display": {
@@ -45,12 +44,12 @@
 			"from": [6, 2, 3],
 			"to": [10, 5, 13],
 			"faces": {
-				"north": {"uv": [0, 0, 4, 3], "texture": "#1"},
-				"east": {"uv": [0, 0, 10, 3], "texture": "#1"},
-				"south": {"uv": [0, 0, 4, 3], "texture": "#1"},
-				"west": {"uv": [0, 0, 10, 3], "texture": "#1"},
-				"up": {"uv": [0, 0, 4, 10], "texture": "#1"},
-				"down": {"uv": [0, 0, 4, 10], "texture": "#1"}
+				"north": {"uv": [0, 0, 4, 3], "texture": "#0"},
+				"east": {"uv": [0, 0, 10, 3], "texture": "#0"},
+				"south": {"uv": [0, 0, 4, 3], "texture": "#0"},
+				"west": {"uv": [0, 0, 10, 3], "texture": "#0"},
+				"up": {"uv": [0, 0, 4, 10], "texture": "#0"},
+				"down": {"uv": [0, 0, 4, 10], "texture": "#0"}
 			}
 		},
 		{
@@ -58,12 +57,12 @@
 			"from": [5, 5, 1],
 			"to": [11, 9, 15],
 			"faces": {
-				"north": {"uv": [0, 0, 6, 4], "texture": "#1"},
-				"east": {"uv": [0, 0, 14, 4], "texture": "#1"},
-				"south": {"uv": [0, 0, 6, 4], "texture": "#1"},
-				"west": {"uv": [0, 0, 14, 4], "texture": "#1"},
-				"up": {"uv": [0, 0, 6, 14], "texture": "#1"},
-				"down": {"uv": [0, 0, 6, 14], "texture": "#1"}
+				"north": {"uv": [0, 0, 6, 4], "texture": "#0"},
+				"east": {"uv": [0, 0, 14, 4], "texture": "#0"},
+				"south": {"uv": [0, 0, 6, 4], "texture": "#0"},
+				"west": {"uv": [0, 0, 14, 4], "texture": "#0"},
+				"up": {"uv": [0, 0, 6, 14], "texture": "#0"},
+				"down": {"uv": [0, 0, 6, 14], "texture": "#0"}
 			}
 		}
 	]
