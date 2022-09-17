@@ -1,0 +1,139 @@
+{
+	id: "3B9E65629E14048F"
+	group: "21337967227D1657"
+	order_index: 0
+	filename: "honest_work"
+	title: "Honest Work"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "The Sprout of Life"
+			x: -5.0d
+			y: 0.0d
+			description: ["The grass around you is rich with seeds. Try breaking it apart, to see if you can find some live seeds for planting."]
+			id: "45839FEF51F15CD3"
+			tasks: [{
+				id: "58EFC41B166583E3"
+				type: "item"
+				item: "minecraft:wheat_seeds"
+			}]
+			rewards: [{
+				id: "26A691B354CA0F9C"
+				type: "item"
+				item: "minecraft:wheat_seeds"
+				count: 5
+			}]
+		}
+		{
+			title: "Nature Will Provide"
+			x: -3.5d
+			y: 3.0d
+			description: ["Use the hoe on crops found in the wild to dig them out of the ground. You should replant some of these crops to grow a stockpile for the winter."]
+			dependencies: ["1C864FB799BB4451"]
+			id: "4763C653C8F88082"
+			tasks: [{
+				id: "0303F033DB7BEECD"
+				type: "item"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "farmersdelight:wild_crops"
+					}
+				}
+			}]
+		}
+		{
+			title: "You Won't Get Anything Done Like That"
+			x: -5.0d
+			y: 1.5d
+			description: [
+				"Farming is hard work. Just like with trees, your hands won't do you justice in the field."
+				"Use some of the materials from thre world around you to create a hoe, which is needed to gather crops."
+			]
+			dependencies: ["4475AFC455FD4917"]
+			id: "1C864FB799BB4451"
+			tasks: [{
+				id: "6FA8B35074998BDD"
+				type: "item"
+				title: "Craft a Hoe"
+				icon: {
+					id: "notreepunching:flint_hoe"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "c:hoes"
+					}
+				}
+			}]
+		}
+		{
+			title: "The Hard Work Is Yet Ahead"
+			x: -3.5d
+			y: 1.5d
+			description: ["You cannot simply put the seeds into the soil and expect them to thrive. Use your hoe to till the soil into proper farmland before planting anything."]
+			dependencies: ["1C864FB799BB4451"]
+			id: "6AB60393D7DBACD4"
+			tasks: [{
+				id: "2FB5011480AFD6E1"
+				type: "questsadditions:use"
+				title: "Till the Dirt"
+				icon: "minecraft:farmland"
+				block_type: 1
+				block: "minecraft:dirt"
+				value: 1L
+				checkItem: true
+				isItemInteraction: true
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "c:hoes"
+					}
+				}
+			}]
+		}
+		{
+			title: "When Do We Feast?"
+			x: -3.5d
+			y: 0.0d
+			description: ["Wheat is a valuable source of food for livestock and humans alike. Plant some of the seeds you found in your farmland, and wait for it to fully grow."]
+			dependencies: [
+				"45839FEF51F15CD3"
+				"6AB60393D7DBACD4"
+			]
+			id: "5E5E8A1046ED086B"
+			tasks: [{
+				id: "39CE3CA6630672AA"
+				type: "item"
+				title: "Grow Wheat"
+				item: "minecraft:wheat"
+				count: 3L
+			}]
+		}
+		{
+			title: "Mobile Farming"
+			x: -3.5d
+			y: -1.5d
+			description: ["Your famland requires nearby water to stay hydrated. This puts you at the mercy of nature when scouting for potential farming locations. By using a bucket, you can move water wherever you wish."]
+			dependencies: [
+				"3619094037883726"
+				"1CB464293D90E1E0"
+			]
+			id: "6B4688801F6C7CFF"
+			tasks: [{
+				id: "2E26F152BB88B93C"
+				type: "item"
+				title: "Fire a Clay Bucket"
+				item: "notreepunching:ceramic_bucket"
+			}]
+		}
+	]
+}

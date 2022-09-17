@@ -1,0 +1,329 @@
+{
+	id: "61F04FDFCF405AFF"
+	group: "1914D11D09907FDA"
+	order_index: 0
+	filename: "stone_age"
+	title: "Stone Age"
+	icon: "minecraft:flint"
+	subtitle: ["The Start of Something Good"]
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "Ouch!"
+			x: -5.0d
+			y: 0.0d
+			description: [
+				"Did you really believe that you could take down a tree with your bare hands? Don't worry, the bruises will heal eventually."
+				"You are going to need to prepare, if you are to survive in this world."
+			]
+			id: "26F9E36DA75E57A1"
+			tasks: [{
+				id: "687EDA82A764F92E"
+				type: "observation"
+				title: "Punch Wood"
+				icon: "minecraft:oak_sapling"
+				timer: 0L
+				observe_type: 1
+				to_observe: "minecraft:logs"
+			}]
+		}
+		{
+			title: "Twigs for Tools"
+			icon: "minecraft:stick"
+			x: -3.5d
+			y: 0.0d
+			description: ["Obtain sticks by breaking leaves. You will need these for tool handles."]
+			dependencies: ["26F9E36DA75E57A1"]
+			id: "217CF67B48015618"
+			tasks: [{
+				id: "065A053C0F173B44"
+				type: "item"
+				title: "Gather Sticks"
+				item: "minecraft:stick"
+			}]
+			rewards: [{
+				id: "1897406FC65EEEDE"
+				type: "item"
+				item: "minecraft:stick"
+				count: 5
+			}]
+		}
+		{
+			title: "Tools, Like Ancient Times"
+			x: -3.5d
+			y: -1.5d
+			description: ["You need tools, and nature will provide. Do like the ancient tribes, and look by the riverside."]
+			dependencies: ["26F9E36DA75E57A1"]
+			id: "451506E407DB38EC"
+			tasks: [{
+				id: "427516084E17CBB5"
+				type: "observation"
+				title: "Find Gravel"
+				icon: "minecraft:gravel"
+				timer: 0L
+				observe_type: 0
+				to_observe: "minecraft:gravel"
+			}]
+		}
+		{
+			title: "Shiny Flint"
+			x: -2.0d
+			y: -1.5d
+			description: [
+				"You heard of ancient tribes making tools of shiny rocks, just like the gravel you found. Perhaps on closer inspection, you could find something strong enough for primitive tools?"
+				"Break gravel to find small pieces of flint."
+			]
+			dependencies: ["451506E407DB38EC"]
+			id: "0161A2AF36B6A5D5"
+			tasks: [{
+				id: "3F35CA5702B7A0A5"
+				type: "item"
+				title: "Find Flint"
+				item: "minecraft:flint"
+			}]
+		}
+		{
+			title: "Careful, It Is Sharp!"
+			icon: "notreepunching:flint_shard"
+			x: -0.5d
+			y: -1.5d
+			description: ["The flint you found is strong, yet too dull for tools. Try hammering it against some exposed rock to break off a few shards, and expose a sharp edge."]
+			dependencies: ["0161A2AF36B6A5D5"]
+			id: "6B372A2EFC99EB05"
+			tasks: [{
+				id: "3459196F4D5E11DB"
+				type: "item"
+				title: "Break Flint Into Shards"
+				item: "notreepunching:flint_shard"
+			}]
+		}
+		{
+			title: "Mind Your Fingers"
+			icon: {
+				id: "notreepunching:flint_knife"
+				Count: 1b
+				tag: {
+					Damage: 0
+				}
+			}
+			x: -0.5d
+			y: 0.0d
+			description: [
+				""
+				"With the materials you have collected, it is now time to craft your first primitive tool: The knife."
+				"I wouldn't challenge monsters with this, but the grass seems a worthy opponent."
+			]
+			dependencies: [
+				"6B372A2EFC99EB05"
+				"217CF67B48015618"
+			]
+			min_required_tasks: 1
+			id: "4B7F2B4A272620E5"
+			tasks: [{
+				id: "1722F07E452A040C"
+				type: "item"
+				title: "Craft a Knife"
+				icon: {
+					id: "notreepunching:flint_knife"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "c:tools/knives"
+					}
+				}
+			}]
+		}
+		{
+			title: "Primitive Tool Bindings"
+			icon: "notreepunching:plant_fiber"
+			x: 1.0d
+			y: 0.0d
+			description: [
+				"In order to make proper tools, you need string to bind together the parts. Some of the grass around you looks to contain some sturdy fibers - you just need a good handful."
+				"Cut grass with your knife to collect plant fiber."
+			]
+			dependencies: ["4B7F2B4A272620E5"]
+			id: "4475AFC455FD4917"
+			tasks: [{
+				id: "0E67FB044D77D4DC"
+				type: "item"
+				title: "Obtain Plant Fiber"
+				item: "notreepunching:plant_fiber"
+			}]
+			rewards: [{
+				id: "7B5BECBE324C56CD"
+				type: "item"
+				item: "notreepunching:plant_fiber"
+				count: 2
+			}]
+		}
+		{
+			title: "Master of the Trees"
+			x: 1.0d
+			y: 1.5d
+			description: [
+				"Not only your knuckles were bruised when punching that tree - your ego took a hit as well."
+				"It is about time to use that plant fiber to construct a sturdy axe, and demand a rematch!"
+			]
+			dependencies: ["4475AFC455FD4917"]
+			id: "4D802A76B8CC44A5"
+			tasks: [{
+				id: "570BD3D418A56F18"
+				type: "item"
+				title: "Craft an Axe"
+				item: {
+					id: "notreepunching:flint_axe"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+			}]
+		}
+		{
+			title: "Master of Stone"
+			x: -0.5d
+			y: 1.5d
+			description: ["Stone is a great building material, but you will need a sturdy tool to break it apart. Use your plant fiber to make a primitive pickaxe."]
+			dependencies: ["4475AFC455FD4917"]
+			id: "2724B9C2547186AA"
+			tasks: [{
+				id: "7D30A3225DBA3FC9"
+				type: "item"
+				title: "Craft a Pickaxe"
+				item: {
+					id: "notreepunching:flint_pickaxe"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+			}]
+			rewards: [{
+				id: "10C4578EB067CA5F"
+				type: "gamestage"
+				title: "Unlock: Iron Age"
+				icon: "minecraft:iron_ingot"
+				auto: "invisible"
+				stage: "Iron Age"
+			}]
+		}
+		{
+			title: "Master of the Dead"
+			x: 2.5d
+			y: 1.5d
+			description: [
+				"Nightfall is upon us, and many a danger lurk the shadows."
+				"You should prioritize making a weapon to fend for yourself and your loved ones."
+			]
+			dependencies: ["4475AFC455FD4917"]
+			id: "75F7D3EE44D80CA3"
+			tasks: [{
+				id: "5573EDE44A5F8653"
+				type: "item"
+				title: "Craft a Macuahuitl"
+				item: {
+					id: "notreepunching:macuahuitl"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+			}]
+		}
+		{
+			title: "Let There Be Fire"
+			icon: "minecraft:campfire"
+			x: 1.0d
+			y: 3.0d
+			description: [
+				"Fire is an invaluable tool for surviving, crafting, and cooking alike. As soon as possible, you should focus on setting up a campfire. You wouldn't want to freeze on your first night, would you?"
+				"Throw a piece of log and three sticks on the ground, and use the fire starter on the items."
+			]
+			dependencies: ["4D802A76B8CC44A5"]
+			id: "1CB464293D90E1E0"
+			tasks: [
+				{
+					id: "530CB3DF4B520252"
+					type: "item"
+					title: "Craft a Fire Starter"
+					item: {
+						id: "notreepunching:fire_starter"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+				{
+					id: "74F0BAA447AB7CDE"
+					type: "observation"
+					title: "Light a Campfire"
+					icon: "minecraft:campfire"
+					timer: 0L
+					observe_type: 0
+					to_observe: "minecraft:campfire"
+				}
+			]
+		}
+		{
+			title: "Clay Making"
+			x: -3.5d
+			y: 1.5d
+			description: ["At this early stage, clay is an invaluable resource for crafting utilities to aid in your daily work."]
+			dependencies: ["217CF67B48015618"]
+			id: "30410FDEB3520AEF"
+			tasks: [{
+				id: "27CCFBFB362D8B39"
+				type: "item"
+				title: "Craft a Clay Tool"
+				item: {
+					id: "notreepunching:clay_tool"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+			}]
+		}
+		{
+			title: "You're a Potter, Harry"
+			x: -3.5d
+			y: 3.0d
+			description: ["By using your clay tool on a block of clay, you can shape it into magnificent works of art - or simply some pots, if you will."]
+			dependencies: ["30410FDEB3520AEF"]
+			id: "3619094037883726"
+			tasks: [{
+				id: "6A1F030E099DFE2F"
+				type: "questsadditions:use"
+				title: "Work Some Clay"
+				icon: "notreepunching:clay_large_vessel"
+				block_type: 0
+				block: "minecraft:clay"
+				value: 1L
+				checkItem: true
+				isItemInteraction: true
+				item: {
+					id: "notreepunching:clay_tool"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+			}]
+			rewards: [{
+				id: "5E70B013AB9B198B"
+				type: "item"
+				item: "minecraft:clay_ball"
+				count: 16
+			}]
+		}
+	]
+}
