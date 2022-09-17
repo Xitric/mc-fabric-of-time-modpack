@@ -20,5 +20,5 @@ onEvent('recipes', event => {
     'notreepunching:plant_string',
   ]);
 
-  event.remove({output: 'notreepunching:plant_fiber'})
+  event.remove({output: 'notreepunching:plant_fiber'});
 });
