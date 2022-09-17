@@ -11,15 +11,7 @@ onEvent('ponder.tag', (event) => {
 
 onEvent('ponder.registry', (event) => {
   event.create('alloy_forgery:seared_bricks_forge_controller')
-    .scene('seared_bricks_forge_scene', 'Creating a primitive forge', (scene, util) => {
-      // TODO: Extract to structure file
-      scene.world.setBlocks([1, 1, 1, 3, 1, 3], 'kubejs:seared_bricks');
-      scene.world.setBlocks([1, 2, 2, 1, 3, 2], 'kubejs:seared_bricks');
-      scene.world.setBlocks([2, 2, 3, 2, 3, 3], 'kubejs:seared_bricks');
-      scene.world.setBlocks([3, 2, 2, 3, 3, 2], 'kubejs:seared_bricks');
-      scene.world.setBlocks([2, 2, 1], 'alloy_forgery:seared_bricks_forge_controller');
-      scene.world.setBlocks([2, 3, 1], 'kubejs:seared_bricks');
-
+    .scene('seared_bricks_forge_scene', 'Creating a primitive forge', 'alloy_forgery:primitive_forge', (scene, util) => {
       scene.showBasePlate();
 
       // Animate in forge base
