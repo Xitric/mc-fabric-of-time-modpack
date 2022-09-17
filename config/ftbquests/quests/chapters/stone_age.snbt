@@ -147,7 +147,7 @@
 			y: 0.0d
 			description: [
 				"In order to make proper tools, you need string to bind together the parts. Some of the grass around you looks to contain some sturdy fibers - you just need a good handful."
-				"Cut grass with your knife to collect plant fiber."
+				"Cut grass with your knife to collect plant fiber. If you happen to have some plant-based material left over, like saplings or crops, you can also cut them into plant fibers on a cutting board."
 			]
 			dependencies: ["4B7F2B4A272620E5"]
 			id: "4475AFC455FD4917"
@@ -166,13 +166,13 @@
 		}
 		{
 			title: "Master of the Trees"
-			x: 1.0d
+			x: 2.5d
 			y: 1.5d
 			description: [
 				"Not only your knuckles were bruised when punching that tree - your ego took a hit as well."
 				"It is about time to use that plant fiber to construct a sturdy axe, and demand a rematch!"
 			]
-			dependencies: ["4475AFC455FD4917"]
+			dependencies: ["015EDFB2920F5419"]
 			id: "4D802A76B8CC44A5"
 			tasks: [{
 				id: "570BD3D418A56F18"
@@ -189,10 +189,10 @@
 		}
 		{
 			title: "Master of Stone"
-			x: -0.5d
+			x: 1.0d
 			y: 1.5d
 			description: ["Stone is a great building material, but you will need a sturdy tool to break it apart. Use your plant fiber to make a primitive pickaxe."]
-			dependencies: ["4475AFC455FD4917"]
+			dependencies: ["015EDFB2920F5419"]
 			id: "2724B9C2547186AA"
 			tasks: [{
 				id: "7D30A3225DBA3FC9"
@@ -217,13 +217,13 @@
 		}
 		{
 			title: "Master of the Dead"
-			x: 2.5d
+			x: 4.0d
 			y: 1.5d
 			description: [
 				"Nightfall is upon us, and many a danger lurk the shadows."
 				"You should prioritize making a weapon to fend for yourself and your loved ones."
 			]
-			dependencies: ["4475AFC455FD4917"]
+			dependencies: ["015EDFB2920F5419"]
 			id: "75F7D3EE44D80CA3"
 			tasks: [{
 				id: "5573EDE44A5F8653"
@@ -241,7 +241,7 @@
 		{
 			title: "Let There Be Fire"
 			icon: "minecraft:campfire"
-			x: 1.0d
+			x: 2.5d
 			y: 3.0d
 			description: [
 				"Fire is an invaluable tool for surviving, crafting, and cooking alike. As soon as possible, you should focus on setting up a campfire. You wouldn't want to freeze on your first night, would you?"
@@ -323,6 +323,30 @@
 				type: "item"
 				item: "minecraft:clay_ball"
 				count: 16
+			}]
+		}
+		{
+			title: "Watch Your Fingers!"
+			x: 2.5d
+			y: 0.0d
+			description: [
+				"The plant fibers you gathered need a little more nurturing before we can use them for tool bindings. Go get yourself a cutting board, and cut out the best fibers you found."
+				"Alternatively, you may also use spider silk for your tool bindings, if you can find any."
+			]
+			dependencies: ["4475AFC455FD4917"]
+			id: "015EDFB2920F5419"
+			tasks: [{
+				id: "53E51B1835ECD5EE"
+				type: "item"
+				title: "Obtain Tool Bindings"
+				icon: "notreepunching:plant_string"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "bookshelf:strings"
+					}
+				}
 			}]
 		}
 	]

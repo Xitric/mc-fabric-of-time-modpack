@@ -1,0 +1,20 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "tag": "minecraft:saplings"
+    }
+  ],
+  "tool": {
+    "tag": "c:tools/knives"
+  },
+  "result": [
+    {
+      "item": "notreepunching:plant_fiber"
+    },
+    {
+      "item": "notreepunching:plant_fiber",
+      "chance": 0.5
+    }
+  ]
+}

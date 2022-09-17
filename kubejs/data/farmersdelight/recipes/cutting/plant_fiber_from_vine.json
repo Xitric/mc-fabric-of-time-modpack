@@ -1,0 +1,25 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "minecraft:vine"
+    }
+  ],
+  "tool": {
+    "tag": "c:tools/knives"
+  },
+  "result": [
+    {
+      "item": "notreepunching:plant_fiber",
+      "count": 3
+    },
+    {
+      "item": "notreepunching:plant_fiber",
+      "chance": 0.5
+    },
+    {
+      "item": "notreepunching:plant_fiber",
+      "chance": 0.25
+    }
+  ]
+}

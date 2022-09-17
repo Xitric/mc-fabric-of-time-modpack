@@ -1,0 +1,21 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "minecraft:cactus"
+    }
+  ],
+  "tool": {
+    "tag": "c:tools/knives"
+  },
+  "result": [
+    {
+      "item": "notreepunching:plant_fiber",
+      "count": 2
+    },
+    {
+      "item": "notreepunching:plant_fiber",
+      "chance": 0.5
+    }
+  ]
+}
