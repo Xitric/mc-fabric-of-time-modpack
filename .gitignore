@@ -18,3 +18,4 @@ usercache.json
 
 # Generated files from KubeJS
 kubejs/exported
+kubejs/assets/ponderjs_generated

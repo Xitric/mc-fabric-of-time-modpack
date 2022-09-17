@@ -1,0 +1,7 @@
+{
+  "material": "kubejs:seared_bricks",
+  "additional_materials": [],
+  "tier": 1,
+  "speed_multiplier": 1,
+  "fuel_capacity": 24000
+}
