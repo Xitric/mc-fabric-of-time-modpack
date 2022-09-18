@@ -1,14 +1,3 @@
-const ponderIndexTag = 'xitric:iron_age'
-const ponderIndexIcon = 'minecraft:iron_ingot'
-const ponderIndexTitle = 'Iron Age'
-const ponderIndexDescription = 'Technology of the iron age'
-
-onEvent('ponder.tag', (event) => {
-  event.createTag(ponderIndexTag, ponderIndexIcon, ponderIndexTitle, ponderIndexDescription, [
-    'alloy_forgery:seared_bricks_forge_controller',
-  ]);
-});
-
 onEvent('ponder.registry', (event) => {
   event.create('alloy_forgery:seared_bricks_forge_controller')
     .scene('seared_bricks_forge_scene', 'Creating a primitive forge', 'alloy_forgery:primitive_forge', (scene, util) => {
@@ -51,7 +40,7 @@ onEvent('ponder.registry', (event) => {
       scene.text(40, 'The forge controller must be placed directly on the foundation', [2.0, 2.5, 1.0])
         .placeNearTarget()
         .attachKeyFrame();
-        scene.idle(50);
+      scene.idle(50);
 
       // Animate working forge
       scene.world.showSection([2, 3, 1], Facing.DOWN);
@@ -65,6 +54,6 @@ onEvent('ponder.registry', (event) => {
       scene.text(40, 'Interact with the controller to add fuels and metals for processing', [2.0, 2.5, 1.0])
         .placeNearTarget()
         .attachKeyFrame();
-        scene.idle(50);
+      scene.idle(50);
     });
 });
