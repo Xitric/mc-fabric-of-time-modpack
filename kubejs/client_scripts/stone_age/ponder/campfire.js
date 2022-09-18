@@ -2,10 +2,10 @@ onEvent('ponder.registry', (event) => {
   event.create([
     'notreepunching:fire_starter',
     'minecraft:campfire'
-  ]).scene('campfire_scene', 'Making a Campfire', (scene, util) => {
-      const campfirePos = util.grid.at(2, 1, 2);
+  ]).scene('campfire_scene', 'Making a Campfire', 'notreepunching:campfire', (scene, util) => {
+      const campfirePos = util.grid.at(2, 1, 1);
       const campfireGroundPos = util.vector.centerOf(campfirePos).add(0, -0.5, 0);
-      const playerEnterPos = util.grid.at(4, 0, 2);
+      const playerEnterPos = util.grid.at(4, 0, 1);
       const playerSpawn = util.vector.topOf(playerEnterPos);
       const dropSpawn = playerSpawn.add(-1, 0.8, 0);
 
@@ -29,7 +29,7 @@ onEvent('ponder.registry', (event) => {
       ];
       const droppedItemEntities = [];
 
-      scene.showBasePlate();
+      scene.showStructure();
 
       // Move in player
       const playerLink = ponderCreatePlayerEntity(scene, playerSpawn, 90);
@@ -71,6 +71,5 @@ onEvent('ponder.registry', (event) => {
         });
       }
       scene.world.setBlock(campfirePos, "minecraft:campfire", false);
-      scene.world.showSection(campfirePos, Facing.UP);
     });
 });

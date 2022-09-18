@@ -3,6 +3,10 @@ onEvent('ponder.registry', (event) => {
     .scene('seared_bricks_forge_scene', 'Creating a primitive forge', 'alloy_forgery:primitive_forge', (scene, util) => {
       scene.showBasePlate();
 
+      // Show back wall
+      scene.world.showSection([0, 1, 4, 4, 4, 4], Facing.DOWN);
+      scene.idle(20);
+
       // Animate in forge base
       for (let x = 1; x < 4; x++) {
         for (let z = 1; z < 4; z++) {

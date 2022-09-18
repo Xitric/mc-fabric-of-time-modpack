@@ -1,6 +1,6 @@
 onEvent('ponder.registry', (event) => {
   event.create('minecraft:flint')
-    .scene('flint_knapping_scene', 'Knapping flint', (scene, util) => {
+    .scene('flint_knapping_scene', 'Knapping flint', 'notreepunching:flint_knapping', (scene, util) => {
       const rockPos = util.grid.at(2, 1, 2);
       const rockTopPos = util.vector.topOf(rockPos);
       const playerEnterPos = util.grid.at(4, 0, 2);
