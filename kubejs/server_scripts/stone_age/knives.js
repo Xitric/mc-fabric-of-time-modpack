@@ -18,7 +18,13 @@ onEvent('recipes', event => {
 
   removeRecipes(event, [
     'notreepunching:plant_string',
+    'notreepunching:plant_fiber_from_saplings_with_knife',
+    'notreepunching:plant_fiber_from_leaves_with_knife',
+    'notreepunching:plant_fiber_from_vines_with_knife',
+    'notreepunching:plant_fiber_from_cactus_with_knife',
+    'notreepunching:plant_fiber_from_small_flowers_with_knife',
+    'notreepunching:plant_fiber_from_tall_flowers_with_knife',
+    'notreepunching:plant_fiber_from_wheat_with_knife',
+    'notreepunching:plant_fiber_from_sugarcane_with_knife',
   ]);
-
-  event.remove({output: 'notreepunching:plant_fiber'});
 });
