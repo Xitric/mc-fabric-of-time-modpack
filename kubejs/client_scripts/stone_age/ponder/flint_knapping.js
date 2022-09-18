@@ -2,15 +2,15 @@ onEvent('ponder.registry', (event) => {
   event.create('minecraft:flint')
     .scene('flint_knapping_scene', 'Knapping flint', (scene, util) => {
       const rockPos = util.grid.at(2, 1, 2);
-      const rockTop = util.vector.topOf(rockPos);      
+      const rockTopPos = util.vector.topOf(rockPos);
       const playerEnterPos = util.grid.at(4, 0, 2);
-      const playerSpawn = util.vector.topOf(playerEnterPos);
+      const playerSpawnPos = util.vector.topOf(playerEnterPos);
       
       scene.world.setBlock(rockPos, "minecraft:stone", false);
       scene.showStructure();
 
       // Move in player with flint
-      const playerLink = ponderCreatePlayerEntity(scene, playerSpawn, 90);
+      const playerLink = ponderCreatePlayerEntity(scene, playerSpawnPos, 90);
       ponderEntityEquipItem(scene, playerLink, 'minecraft:flint');
 
       scene.idle(10);
@@ -21,7 +21,7 @@ onEvent('ponder.registry', (event) => {
       scene.showControls(40, rockPos.above(1), "down")
         .rightClick()
         .withItem("minecraft:flint");
-      scene.text(40, 'Flint can be knapped against exposed rock surfaces', rockTop)
+      scene.text(40, 'Flint can be knapped against exposed rock surfaces', rockTopPos)
         .placeNearTarget()
         .attachKeyFrame();
       scene.idle(50);
@@ -33,7 +33,7 @@ onEvent('ponder.registry', (event) => {
       ponderEntityUnequipItem(scene, playerLink);
 
       scene.idle(10);
-      scene.text(40, 'Sometimes knapping will fail, destroying the flint in the process', rockTop)
+      scene.text(40, 'Sometimes knapping will fail, destroying the flint in the process', rockTopPos)
         .placeNearTarget();
       scene.idle(50);
 
@@ -45,10 +45,10 @@ onEvent('ponder.registry', (event) => {
       ponderEntityUseItem(scene, playerLink);
       scene.idle(5);
       ponderEntityUnequipItem(scene, playerLink);
-      scene.world.createItemEntity(rockTop.add(0, 0, 0), util.vector.of(-0.05, 0.2, -0.04), "notreepunching:flint_shard");
+      scene.world.createItemEntity(rockTopPos, util.vector.of(-0.05, 0.2, -0.04), "notreepunching:flint_shard");
 
       scene.idle(10);
-      scene.text(40, 'On successful knapping, you will acquire a flint shard', rockTop.add(-0.4, 0.3, -0.3))
+      scene.text(40, 'On successful knapping, you will acquire a flint shard', rockTopPos.add(-0.4, 0.3, -0.3))
         .placeNearTarget();
       scene.idle(50);
     });

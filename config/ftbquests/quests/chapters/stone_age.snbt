@@ -245,7 +245,7 @@
 			y: 3.0d
 			description: [
 				"Fire is an invaluable tool for surviving, crafting, and cooking alike. As soon as possible, you should focus on setting up a campfire. You wouldn't want to freeze on your first night, would you?"
-				"Throw a piece of log and three sticks on the ground, and use the fire starter on the items."
+				"You need to gather a dry piece of log or some planks for the primary fuel source, as well as three kindlings to get the fire started. Throw them all on the ground, and use the fire starter on the items."
 			]
 			dependencies: ["4D802A76B8CC44A5"]
 			id: "1CB464293D90E1E0"
@@ -261,6 +261,31 @@
 							Damage: 0
 						}
 					}
+				}
+				{
+					id: "6F3DB5835F5F1339"
+					type: "item"
+					title: "Acquire Campfire Logs"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "notreepunching:fire_starter_logs"
+						}
+					}
+				}
+				{
+					id: "285FC0AFBEE888E2"
+					type: "item"
+					title: "Acquire Kindling"
+					item: {
+						id: "itemfilters:tag"
+						Count: 1b
+						tag: {
+							value: "notreepunching:fire_starter_kindling"
+						}
+					}
+					count: 3L
 				}
 				{
 					id: "74F0BAA447AB7CDE"
