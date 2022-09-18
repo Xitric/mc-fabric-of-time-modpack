@@ -55,21 +55,22 @@ onEvent('ponder.registry', (event) => {
       // Exlpain fire starter
       scene.idle(10);
       ponderEntityEquipItem(scene, playerLink, 'notreepunching:fire_starter');
-      scene.showControls(40, campfirePos.above(1), "down")
+      scene.showControls(40, campfirePos.above(1), 'down')
         .rightClick()
-        .withItem("notreepunching:fire_starter");
+        .withItem('notreepunching:fire_starter');
       scene.text(40, 'Use your fire starter on the items to set them ablaze', campfirePos)
         .placeNearTarget()
         .attachKeyFrame();
       scene.idle(50);
 
       // Set ablaze
+      scene.idle(20)
       ponderEntityUseItem(scene, playerLink);
       for (const droppedEntity of droppedItemEntities) {
         scene.world.modifyEntity(droppedEntity, (e) => {
           e.discard();
         });
       }
-      scene.world.setBlock(campfirePos, "minecraft:campfire", false);
+      scene.world.setBlock(campfirePos, 'minecraft:campfire', false);
     });
 });

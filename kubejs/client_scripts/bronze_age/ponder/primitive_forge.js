@@ -49,7 +49,7 @@ onEvent('ponder.registry', (event) => {
       // Animate working forge
       scene.world.showSection([2, 3, 1], Facing.DOWN);
       scene.world.modifyBlocks([2, 2, 1], (curState) => curState.with('lit', 'true'), true);
-      scene.particles.simple(200, "smoke", [2.5, 3.5, 2.5])
+      scene.particles.simple(200, 'smoke', [2.5, 3.5, 2.5])
         .scale(2.0)
         .density(4)
         .motion([0, 0.004, 0]);

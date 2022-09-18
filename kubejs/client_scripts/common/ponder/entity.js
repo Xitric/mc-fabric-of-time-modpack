@@ -1,5 +1,5 @@
 function ponderCreatePlayerEntity(scene, position, rotation) {
-  const playerLink = scene.world.createEntity("minecraft:skeleton", position);
+  const playerLink = scene.world.createEntity('minecraft:skeleton', position);
   scene.world.modifyEntity(playerLink, (player) => {
     player.setItemSlot('HEAD', 'minecraft:player_head');
     player.setItemSlot('CHEST', 'minecraft:leather_chestplate');
